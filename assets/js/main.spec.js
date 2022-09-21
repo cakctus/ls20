@@ -2,24 +2,6 @@
 // toBeNaN
 
 describe("Test #1", () => {
-  function ageClassification(num) {
-    return num > 0
-      ? num > 24
-        ? num > 44
-          ? num > 65
-            ? num > 75
-              ? num > 90
-                ? num > 122
-                  ? null
-                  : "долгожители"
-                : "старческий возраст"
-              : "пожилой возраст"
-            : "средний возраст"
-          : "молодой возраст"
-        : "детский возраст"
-      : null
-  }
-
   it("Check Age", () => {
     expect(ageClassification(-1)).toBe(null)
     expect(ageClassification(1)).toBe("детский возраст")
@@ -36,19 +18,13 @@ describe("Test #1", () => {
     expect(ageClassification(122.01)).toBe(null)
     expect(ageClassification(150)).toBe(null)
   })
+})
 
-  function evenFn(n) {
-    var arr = []
-    for (var i = 1; i < n; i++) {
-      arr.push(++i)
-    }
-    return arr
-  }
-  const arr1 = [...evenFn(10)]
-  const arr2 = [...evenFn(15)]
-  const arr3 = [...evenFn(20)]
-
+describe("Test #2", () => {
   it("Check Array", () => {
+    const arr1 = [...evenFn(10)]
+    const arr2 = [...evenFn(15)]
+    const arr3 = [...evenFn(20)]
     expect(evenFn(10)).toEqual(arr1)
     expect(evenFn(15)).toEqual(arr2)
     expect(evenFn(20)).toEqual(arr3)
