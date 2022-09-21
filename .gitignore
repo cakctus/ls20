@@ -2,3 +2,6 @@ node_modules/
 spec/
 samples/
 libs/
+gulpfile.js
+.csscomb.json
+assets/scss
